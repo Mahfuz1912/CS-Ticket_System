@@ -24,11 +24,11 @@ const MainCodeComponent = () => {
     });
   };
 
-  const handleComplete = (ticketId) => {
-    setTicket((prev) => prev.filter((ticket) => ticket.id !== ticketId.id));
+  const handleComplete = (comticket) => {
+    setTicket((prev) => prev.filter((ticket) => ticket.id !== comticket.id));
     setInProgress((prev) => prev - 1);
     setResolved((prev) => prev + 1);
-    setResolvedTicket((prev) => [...prev, ticketId]);
+    setResolvedTicket((prev) => [...prev, comticket]);
     toast.success("Ticket marked as resolved", {
       position: "top-right",
       autoClose: 3000,
@@ -52,7 +52,6 @@ const MainCodeComponent = () => {
     <div className="min-h-screen bg-[url('/vector2.png')] bg-no-repeat bg-cover bg-fixed">
       <Bannar inProgress={inProgress} resolved={resolved} />
       <div className="w-11/12 max-w-7xl mx-auto py-8 md:py-12 grid grid-cols-1 lg:grid-cols-3 gap-6">
-      
         <div className="lg:col-span-2 rounded-2xl p-4 md:p-6">
           <h1 className="font-bold text-xl md:text-2xl text-gray-800 mb-4 md:mb-6 flex items-center gap-2">
             <span className="w-2 h-5 md:h-6 bg-purple-500 rounded-full"></span>
@@ -121,18 +120,11 @@ const MainCodeComponent = () => {
           </div>
         </div>
 
-
         <div className="lg:col-span-1 space-y-4 md:space-y-6">
-
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm p-4 md:p-6">
             <h1 className="font-bold text-lg md:text-xl text-gray-800 mb-3 md:mb-4 flex items-center gap-2">
               <span className="w-2 h-4 md:h-5 bg-amber-500 rounded-full"></span>
               Task Status
-              {inProgress > 0 && (
-                <span className="ml-auto bg-amber-100 text-amber-600 text-xs md:text-sm px-2 md:px-3 py-1 rounded-full">
-                  {inProgress} active
-                </span>
-              )}
             </h1>
             {inProgress === 0 ? (
               <div className="text-center py-6 md:py-8">
@@ -159,20 +151,20 @@ const MainCodeComponent = () => {
                 </p>
               </div>
             ) : (
-              <div className="space-y-2 md:space-y-3 max-h-75 md:max-h-100 overflow-y-auto">
+              <div className="space-y-2 md:space-y-3 max-h-75 md:max-h-100 overflow-y-auto pr-1">
                 {ticket.map((ticket) => (
                   <div
                     key={ticket.id}
-                    className="bg-linear-to-r from-amber-50 to-orange-50 border border-amber-100 rounded-xl p-3 md:p-4 hover:shadow-md transition-shadow"
+                    className="bg-linear-to-r from-amber-50 to-orange-50 border border-amber-100 rounded-xl p-3 md:p-4 hover:shadow-md hover:border-amber-200 transition-all duration-200"
                   >
                     <h2 className="font-semibold text-sm md:text-base text-gray-800 mb-2 md:mb-3 line-clamp-2">
                       {ticket.title}
                     </h2>
                     <button
-                      className="w-full btn btn-sm md:btn-md bg-linear-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white border-none rounded-lg text-xs md:text-sm"
+                      className="w-full btn btn-sm md:btn-md bg-linear-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white border-none rounded-lg text-xs md:text-sm shadow-sm hover:shadow-md transition-all"
                       onClick={() => handleComplete(ticket)}
                     >
-                      ✓ Mark Complete
+                      ✓ Complete
                     </button>
                   </div>
                 ))}
@@ -185,11 +177,6 @@ const MainCodeComponent = () => {
             <h1 className="font-bold text-lg md:text-xl text-gray-800 mb-3 md:mb-4 flex items-center gap-2">
               <span className="w-2 h-4 md:h-5 bg-emerald-500 rounded-full"></span>
               Resolved
-              {resolved > 0 && (
-                <span className="ml-auto bg-emerald-100 text-emerald-600 text-xs md:text-sm px-2 md:px-3 py-1 rounded-full">
-                  {resolved} done
-                </span>
-              )}
             </h1>
             {resolved === 0 ? (
               <div className="text-center py-6 md:py-8">
@@ -216,13 +203,13 @@ const MainCodeComponent = () => {
                 </p>
               </div>
             ) : (
-              <div className="space-y-2 md:space-y-3 max-h-62.5 md:max-h-75 overflow-y-auto">
+              <div className="space-y-2 md:space-y-3 max-h-62.5 md:max-h-75 overflow-y-auto pr-1">
                 {resolvedTicket.map((ticket) => (
                   <div
                     key={ticket.id}
-                    className="bg-linear-to-r from-emerald-50 to-teal-50 border border-emerald-100 rounded-xl p-3 md:p-4 flex items-center gap-2 md:gap-3"
+                    className="bg-linear-to-r from-emerald-50 to-teal-50 border border-emerald-100 rounded-xl p-3 md:p-4 flex items-center gap-2 md:gap-3 hover:shadow-md hover:border-emerald-200 transition-all duration-200"
                   >
-                    <div className="w-6 h-6 md:w-8 md:h-8 bg-emerald-500 rounded-full flex items-center justify-center flex-0">
+                    <div className="w-6 h-6 md:w-8 md:h-8 bg-linear-to-br from-emerald-400 to-emerald-600 rounded-full flex items-center justify-center shrink-0 shadow-sm">
                       <svg
                         className="w-3 h-3 md:w-4 md:h-4 text-white"
                         fill="none"
@@ -232,12 +219,12 @@ const MainCodeComponent = () => {
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          strokeWidth="2"
+                          strokeWidth="3"
                           d="M5 13l4 4L19 7"
                         />
                       </svg>
                     </div>
-                    <h2 className="font-semibold text-xs md:text-sm text-gray-700 line-clamp-1">
+                    <h2 className="font-semibold text-xs md:text-sm text-gray-700 line-clamp-1 flex-1">
                       {ticket.title}
                     </h2>
                   </div>

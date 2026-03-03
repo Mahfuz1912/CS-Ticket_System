@@ -45,9 +45,7 @@ const Navbar = () => {
           <h1 className="text-2xl font-bold text-gray-800 hidden md:inline">
             CS — Ticket System
           </h1>
-          <h1 className="text-2xl font-bold text-gray-800 md:hidden">
-            CSTM
-          </h1>
+          <h1 className="text-2xl font-bold text-gray-800 md:hidden">CSTM</h1>
         </div>
 
         <div className="navbar-end">
