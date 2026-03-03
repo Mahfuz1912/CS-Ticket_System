@@ -42,8 +42,11 @@ const Navbar = () => {
               ))}
             </ul>
           </div>
-          <h1 className="text-2xl font-bold text-gray-800">
+          <h1 className="text-2xl font-bold text-gray-800 hidden md:inline">
             CS — Ticket System
+          </h1>
+          <h1 className="text-2xl font-bold text-gray-800 md:hidden">
+            CSTM
           </h1>
         </div>
 
