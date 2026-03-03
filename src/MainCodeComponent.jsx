@@ -49,11 +49,10 @@ const MainCodeComponent = () => {
   };
 
   return (
-    <>
+    <div className=" bg-[url('/vector2.png')] bg-no-repeat bg-cover">
       <Bannar inProgress={inProgress} resolved={resolved} />
-      <div className="w-11/12 mx-auto mt-12 flex gap-6">
-     
-        <div className="flex-2 bg-white rounded-2xl shadow-sm p-6">
+      <div className="w-11/12 mx-auto mt-12 flex gap-6 ">
+        <div className="flex-2  rounded-2xl p-6">
           <h1 className="font-bold text-2xl text-gray-800 mb-6 flex items-center gap-2">
             <span className="w-2 h-6 bg-purple-500 rounded-full"></span>
             Customer Tickets
@@ -132,10 +131,8 @@ const MainCodeComponent = () => {
           </div>
         </div>
 
-       
         <div className="flex-1 space-y-6">
-         
-          <div className="bg-white rounded-2xl shadow-sm p-6">
+          <div className="rounded-2xl shadow-sm p-6">
             <h1 className="font-bold text-xl text-gray-800 mb-4 flex items-center gap-2">
               <span className="w-2 h-5 bg-amber-500 rounded-full"></span>
               Task Status
@@ -191,7 +188,7 @@ const MainCodeComponent = () => {
             )}
           </div>
 
-          <div className="bg-white rounded-2xl shadow-sm p-6">
+          <div className=" rounded-2xl shadow-sm p-6">
             <h1 className="font-bold text-xl text-gray-800 mb-4 flex items-center gap-2">
               <span className="w-2 h-5 bg-emerald-500 rounded-full"></span>
               Resolved Tickets
@@ -257,7 +254,7 @@ const MainCodeComponent = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
