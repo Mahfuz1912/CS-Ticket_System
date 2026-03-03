@@ -9,7 +9,7 @@ const MainCodeComponent = () => {
   const [resolved, setResolved] = useState(0); //Resolved Tickets
   const [resolvedTicket, setResolvedTicket] = useState([]); //Resolved Tickets with details
   useEffect(() => {
-    fetch("/public/data.json")
+    fetch("/data.json")
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
