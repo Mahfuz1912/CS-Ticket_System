@@ -52,7 +52,7 @@ const MainCodeComponent = () => {
     <div className="min-h-screen bg-[url('/vector2.png')] bg-no-repeat bg-cover bg-fixed">
       <Bannar inProgress={inProgress} resolved={resolved} />
       <div className="w-11/12 max-w-7xl mx-auto py-8 md:py-12 grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Customer Tickets - Takes 2 columns on large screens */}
+      
         <div className="lg:col-span-2 rounded-2xl p-4 md:p-6">
           <h1 className="font-bold text-xl md:text-2xl text-gray-800 mb-4 md:mb-6 flex items-center gap-2">
             <span className="w-2 h-5 md:h-6 bg-purple-500 rounded-full"></span>
@@ -121,9 +121,9 @@ const MainCodeComponent = () => {
           </div>
         </div>
 
-        {/* Sidebar - Task Status & Resolved */}
+
         <div className="lg:col-span-1 space-y-4 md:space-y-6">
-          {/* Task Status Section */}
+
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm p-4 md:p-6">
             <h1 className="font-bold text-lg md:text-xl text-gray-800 mb-3 md:mb-4 flex items-center gap-2">
               <span className="w-2 h-4 md:h-5 bg-amber-500 rounded-full"></span>
@@ -159,17 +159,17 @@ const MainCodeComponent = () => {
                 </p>
               </div>
             ) : (
-              <div className="space-y-2 md:space-y-3 max-h-[300px] md:max-h-[400px] overflow-y-auto">
+              <div className="space-y-2 md:space-y-3 max-h-75 md:max-h-100 overflow-y-auto">
                 {ticket.map((ticket) => (
                   <div
                     key={ticket.id}
-                    className="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-100 rounded-xl p-3 md:p-4 hover:shadow-md transition-shadow"
+                    className="bg-linear-to-r from-amber-50 to-orange-50 border border-amber-100 rounded-xl p-3 md:p-4 hover:shadow-md transition-shadow"
                   >
                     <h2 className="font-semibold text-sm md:text-base text-gray-800 mb-2 md:mb-3 line-clamp-2">
                       {ticket.title}
                     </h2>
                     <button
-                      className="w-full btn btn-sm md:btn-md bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white border-none rounded-lg text-xs md:text-sm"
+                      className="w-full btn btn-sm md:btn-md bg-linear-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white border-none rounded-lg text-xs md:text-sm"
                       onClick={() => handleComplete(ticket)}
                     >
                       ✓ Mark Complete
@@ -216,13 +216,13 @@ const MainCodeComponent = () => {
                 </p>
               </div>
             ) : (
-              <div className="space-y-2 md:space-y-3 max-h-[250px] md:max-h-[300px] overflow-y-auto">
+              <div className="space-y-2 md:space-y-3 max-h-62.5 md:max-h-75 overflow-y-auto">
                 {resolvedTicket.map((ticket) => (
                   <div
                     key={ticket.id}
-                    className="bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-100 rounded-xl p-3 md:p-4 flex items-center gap-2 md:gap-3"
+                    className="bg-linear-to-r from-emerald-50 to-teal-50 border border-emerald-100 rounded-xl p-3 md:p-4 flex items-center gap-2 md:gap-3"
                   >
-                    <div className="w-6 h-6 md:w-8 md:h-8 bg-emerald-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-6 h-6 md:w-8 md:h-8 bg-emerald-500 rounded-full flex items-center justify-center flex-0">
                       <svg
                         className="w-3 h-3 md:w-4 md:h-4 text-white"
                         fill="none"
