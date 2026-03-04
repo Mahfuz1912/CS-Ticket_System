@@ -10,7 +10,7 @@ const Layout = () => {
       <Navbar />
       <MainCodeComponent />
       <Footer />
-      <ToastContainer />
+      <ToastContainer theme="colored" />
     </div>
   );
 };

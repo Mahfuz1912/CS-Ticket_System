@@ -8,6 +8,7 @@ const MainCodeComponent = () => {
   const [ticket, setTicket] = useState([]); //In Progress Tickets with details
   const [resolved, setResolved] = useState(0); //Resolved Tickets
   const [resolvedTicket, setResolvedTicket] = useState([]); //Resolved Tickets with details
+
   useEffect(() => {
     fetch("/data.json")
       .then((res) => res.json())
@@ -15,12 +16,11 @@ const MainCodeComponent = () => {
   }, []);
 
   const handelAdd = ({ ticket }) => {
-    console.log(ticket);
     setInProgress((prev) => prev + 1);
     setTicket((prev) => [...prev, ticket]);
-    toast.success("Ticket added to in-progress", {
-      position: "top-right",
-      autoClose: 3000,
+    toast.success("Ticket Added to In-Progress", {
+      position: "top-center",
+      autoClose: 1500,
     });
   };
 
@@ -29,9 +29,9 @@ const MainCodeComponent = () => {
     setInProgress((prev) => prev - 1);
     setResolved((prev) => prev + 1);
     setResolvedTicket((prev) => [...prev, comticket]);
-    toast.success("Ticket marked as resolved", {
-      position: "top-right",
-      autoClose: 3000,
+    toast.success("Ticket Marked As Resolved", {
+      position: "top-center",
+      autoClose: 1500,
     });
   };
 
@@ -51,7 +51,7 @@ const MainCodeComponent = () => {
   return (
     <div className="min-h-screen bg-[url('/vector2.png')] bg-no-repeat bg-cover bg-fixed">
       <Bannar inProgress={inProgress} resolved={resolved} />
-      <div className="w-11/12 max-w-7xl mx-auto py-8 md:py-12 grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="w-11/12 mx-auto py-8 md:py-12 grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 rounded-2xl p-4 md:p-6">
           <h1 className="font-bold text-xl md:text-2xl text-gray-800 mb-4 md:mb-6 flex items-center gap-2">
             <span className="w-2 h-5 md:h-6 bg-purple-500 rounded-full"></span>
@@ -108,8 +108,25 @@ const MainCodeComponent = () => {
                             d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                           />
                         </svg>
-                        <span className="hidden xs:inline">
-                          {ticket.customer}
+                        <span>{ticket.customer}</span>
+                      </span>
+                      <span className="text-gray-300">|</span>
+                      <span className="flex items-center gap-1">
+                        <svg
+                          className="w-3 h-3 md:w-4 md:h-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                          />
+                        </svg>
+                        <span>
+                          {ticket.createdAt}
                         </span>
                       </span>
                     </div>

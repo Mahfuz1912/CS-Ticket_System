@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Login page not loading",
     "description": "The login page displays a blank screen on Chrome browser. Tried clearing cache but issue persists.",
-    "customer": "John Smith",
+    "customer": "Ashraf",
     "priority": "high",
     "status": "open",
     "createdAt": "2026-02-15"
@@ -12,7 +12,7 @@
     "id": 2,
     "title": "Payment processing error",
     "description": "Customers are receiving timeout errors when attempting to complete checkout with credit cards.",
-    "customer": "Sarah Johnson",
+    "customer": "Sabit",
     "priority": "critical",
     "status": "in-progress",
     "createdAt": "2026-02-18"
@@ -21,7 +21,7 @@
     "id": 3,
     "title": "Profile picture upload failing",
     "description": "Unable to upload profile pictures larger than 1MB. Getting 'file too large' error even for small images.",
-    "customer": "Mike Davis",
+    "customer": "Mahfuz",
     "priority": "medium",
     "status": "open",
     "createdAt": "2026-02-20"
@@ -30,7 +30,7 @@
     "id": 4,
     "title": "Email notifications not received",
     "description": "Order confirmation emails are not being delivered. Checked spam folder with no results.",
-    "customer": "Emily Chen",
+    "customer": "Emon",
     "priority": "high",
     "status": "resolved",
     "createdAt": "2026-02-21"
@@ -39,7 +39,7 @@
     "id": 5,
     "title": "Dashboard loading slowly",
     "description": "The main dashboard takes over 30 seconds to load. All other pages load normally.",
-    "customer": "Robert Wilson",
+    "customer": "Sadia",
     "priority": "medium",
     "status": "in-progress",
     "createdAt": "2026-02-22"
@@ -48,7 +48,7 @@
     "id": 6,
     "title": "Mobile app crashing on startup",
     "description": "iOS app crashes immediately after splash screen. iPhone 14 Pro, iOS 17.2.",
-    "customer": "Lisa Anderson",
+    "customer": "Tiyasa",
     "priority": "critical",
     "status": "open",
     "createdAt": "2026-02-24"
@@ -57,7 +57,7 @@
     "id": 7,
     "title": "Search function returning wrong results",
     "description": "Product search shows unrelated items. Searching for 'laptop' returns kitchen appliances.",
-    "customer": "David Brown",
+    "customer": "Tanzira",
     "priority": "medium",
     "status": "open",
     "createdAt": "2026-02-25"
@@ -66,7 +66,7 @@
     "id": 8,
     "title": "Password reset link expired",
     "description": "Password reset emails contain links that show as expired immediately upon clicking.",
-    "customer": "Jennifer Martinez",
+    "customer": "Tabassum",
     "priority": "high",
     "status": "resolved",
     "createdAt": "2026-02-26"
@@ -75,7 +75,7 @@
     "id": 9,
     "title": "Discount code not applying",
     "description": "Promo code SAVE20 is not applying the 20% discount at checkout. Code should be valid until March 2026.",
-    "customer": "Chris Taylor",
+    "customer": "Messi",
     "priority": "low",
     "status": "open",
     "createdAt": "2026-02-27"
@@ -84,7 +84,7 @@
     "id": 10,
     "title": "Account locked after failed attempts",
     "description": "Account got locked after 2 failed login attempts instead of the stated 5 attempts policy.",
-    "customer": "Amanda White",
+    "customer": "Ronaldo",
     "priority": "medium",
     "status": "in-progress",
     "createdAt": "2026-02-28"
@@ -93,7 +93,7 @@
     "id": 11,
     "title": "Invoice PDF not generating",
     "description": "Download invoice button produces a corrupted PDF file that cannot be opened.",
-    "customer": "Kevin Lee",
+    "customer": "Tormuz Bepari",
     "priority": "high",
     "status": "open",
     "createdAt": "2026-03-01"
@@ -102,7 +102,7 @@
     "id": 12,
     "title": "Two-factor authentication issues",
     "description": "SMS codes for 2FA are arriving 10+ minutes late, making login impossible.",
-    "customer": "Rachel Green",
+    "customer": "Rajakar",
     "priority": "critical",
     "status": "in-progress",
     "createdAt": "2026-03-01"
@@ -111,7 +111,7 @@
     "id": 13,
     "title": "Wishlist items disappearing",
     "description": "Items added to wishlist are gone after logging out and back in.",
-    "customer": "Tom Harris",
+    "customer": "Neymar Jr.",
     "priority": "low",
     "status": "open",
     "createdAt": "2026-03-02"
@@ -120,7 +120,7 @@
     "id": 14,
     "title": "Shipping address not saving",
     "description": "New shipping addresses cannot be saved to account profile. Form clears after submission.",
-    "customer": "Nicole Clark",
+    "customer": "Spider-19",
     "priority": "medium",
     "status": "resolved",
     "createdAt": "2026-03-02"
@@ -129,7 +129,7 @@
     "id": 15,
     "title": "Order history showing duplicates",
     "description": "Each order appears twice in order history. Concerned about being charged multiple times.",
-    "customer": "Brian Miller",
+    "customer": "Mashrafi",
     "priority": "high",
     "status": "open",
     "createdAt": "2026-03-03"
