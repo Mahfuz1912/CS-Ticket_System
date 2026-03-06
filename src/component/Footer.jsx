@@ -6,10 +6,7 @@ export const Footer = () => {
         <div className="space-y-4">
           <h2 className="text-xl font-bold">CS — Ticket System</h2>
           <p className="text-gray-400 text-sm leading-relaxed">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            CS — Ticket System is a comprehensive customer support solution designed to streamline communication and enhance customer satisfaction. Our platform offers a range of features to help businesses manage and resolve customer inquiries efficiently.
           </p>
         </div>
 
